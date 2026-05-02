@@ -1,0 +1,77 @@
+/* =====================================================
+   SalonPro — Custom Styles
+   Style premium, animations, fluidité
+   ===================================================== */
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* ===== Animations d'apparition ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Animation flottante ===== */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ===== Bouton WhatsApp flottant ===== */
+.whatsapp-float {
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+}
+
+/* ===== Scrollbar custom ===== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #C9A961;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #B89651;
+}
+
+/* ===== Navbar scrolled ===== */
+.navbar-scrolled {
+    background: rgba(255, 255, 255, 0.95) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== Selection ===== */
+::selection {
+    background: #C9A961;
+    color: #fff;
+}
+
+/* ===== Responsive ajustements ===== */
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem !important; }
+    h2 { font-size: 2rem !important; }
+}
+
+/* ===== Form focus premium ===== */
+input:focus {
+    box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.2);
+}
