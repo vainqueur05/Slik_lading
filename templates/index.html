@@ -1,4 +1,3 @@
-
 {% extends "base.html" %}
 
 {% block content %}
@@ -8,16 +7,17 @@
 <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 <a href="#" class="flex items-center gap-2">
 <span class="iconify text-gold text-3xl" data-icon="mdi:scissors-cutting"></span>
-<span class="font-display font-bold text-2xl">Salon<span class="text-gold">Pro</span></span>
+<span class="font-display font-bold text-2xl">Kairos<span class="text-gold"> Écosystème</span></span>
 </a>
 <ul class="hidden md:flex items-center gap-8 text-sm font-medium">
 <li><a href="#solution" class="hover:text-gold transition">Solution</a></li>
 <li><a href="#benefices" class="hover:text-gold transition">Bénéfices</a></li>
 <li><a href="#etapes" class="hover:text-gold transition">Comment ça marche</a></li>
 <li><a href="#temoignages" class="hover:text-gold transition">Avis</a></li>
+<li><a href="#qui-suis-je" class="hover:text-gold transition">Qui suis-je</a></li>
 </ul>
-<a href="https://wa.me/{{ whatsapp_number }}?text={{ whatsapp_message }}" target="_blank"
-           class="hidden md:inline-flex items-center gap-2 bg-dark text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-gold transition">
+<a href="https://wa.me/{{ whatsapp_number }}?text={{ whatsapp_message | urlencode }}" target="_blank"
+   class="hidden md:inline-flex items-center gap-2 bg-dark text-white px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-gold transition">
 <span class="iconify" data-icon="mdi:whatsapp"></span>
             WhatsApp
 </a>
@@ -32,6 +32,7 @@
 <li><a href="#benefices">Bénéfices</a></li>
 <li><a href="#etapes">Comment ça marche</a></li>
 <li><a href="#temoignages">Avis</a></li>
+<li><a href="#qui-suis-je">Qui suis-je</a></li>
 <li><a href="https://wa.me/{{ whatsapp_number }}" class="text-gold font-bold">WhatsApp</a></li>
 </ul>
 </div>
@@ -39,7 +40,6 @@
 
 <!-- ===================== HERO ===================== -->
 <section class="relative pt-32 pb-20 overflow-hidden bg-gradient-to-b from-gray-50 to-white">
-<!-- Décoration -->
 <div class="absolute top-0 right-0 w-96 h-96 bg-gold/10 rounded-full blur-3xl -z-10"></div>
 <div class="absolute bottom-0 left-0 w-96 h-96 bg-dark/5 rounded-full blur-3xl -z-10"></div>
 
@@ -49,31 +49,30 @@
 <div class="reveal">
 <span class="inline-flex items-center gap-2 bg-gold/10 text-gold px-4 py-2 rounded-full text-xs font-semibold mb-6">
 <span class="iconify" data-icon="mdi:flash"></span>
-                    SITE PRÊT EN 24H — OFFRE LIMITÉE
+                    SITE VITRINE OFFERT — ESSAI GRATUIT 14 JOURS
 </span>
 <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-black leading-tight mb-6">
-                    Votre salon mérite<br>
-                    un <span class="text-gold italic">site premium</span>.
+                    Offrez à votre salon<br>
+                    la <span class="text-gold italic">visibilité qu'il mérite</span>.
 </h1>
 <p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
-                    Créez votre site de salon en quelques minutes et gérez tous vos établissements simplement, depuis un seul endroit.
+                    Je crée pour vous un site vitrine professionnel, avec vos photos, vos services, et un bouton WhatsApp direct. Sans engagement, sans risque.
 </p>
 <div class="flex flex-col sm:flex-row gap-4">
-<a href="https://wa.me/{{ whatsapp_number }}?text={{ whatsapp_message }}" target="_blank"
-                       class="group inline-flex items-center justify-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all">
+<a href="https://wa.me/{{ whatsapp_number }}?text={{ whatsapp_message | urlencode }}" target="_blank"
+   class="group inline-flex items-center justify-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full font-semibold shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all">
 <span class="iconify text-2xl" data-icon="mdi:whatsapp"></span>
-                        Contacter sur WhatsApp
+                        Recevoir un prototype gratuit
 </a>
-<a href="#demo"
-                       class="inline-flex items-center justify-center gap-3 bg-dark text-white px-8 py-4 rounded-full font-semibold hover:bg-gold transition-all">
+<a href="https://slik-7rms.onrender.com/sly-coiffure" class="inline-flex items-center justify-center gap-3 bg-dark text-white px-8 py-4 rounded-full font-semibold hover:bg-gold transition-all">
 <span class="iconify text-xl" data-icon="mdi:play-circle"></span>
-                        Demander une démo
+                        Voir un exemple
 </a>
 </div>
 <div class="flex items-center gap-6 mt-8 text-sm text-gray-500">
 <div class="flex items-center gap-2">
 <span class="iconify text-gold" data-icon="mdi:check-circle"></span>
-                        Sans engagement
+                        14 jours gratuits
 </div>
 <div class="flex items-center gap-2">
 <span class="iconify text-gold" data-icon="mdi:check-circle"></span>
@@ -85,13 +84,12 @@
 <!-- Mockup -->
 <div class="relative reveal">
 <div class="relative">
-<!-- Dashboard mockup -->
 <div class="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-100 transform rotate-1 hover:rotate-0 transition-transform duration-500">
 <div class="bg-dark p-4 flex items-center gap-2">
 <div class="w-3 h-3 rounded-full bg-red-400"></div>
 <div class="w-3 h-3 rounded-full bg-yellow-400"></div>
 <div class="w-3 h-3 rounded-full bg-green-400"></div>
-<span class="text-xs text-gray-400 ml-3">monsalon.slik.com</span>
+<span class="text-xs text-gray-400 ml-3">votresalon.kairos-ecosysteme.cd</span>
 </div>
 <div class="p-6 bg-gradient-to-br from-gray-50 to-white">
 <div class="flex items-center gap-3 mb-4">
@@ -99,33 +97,33 @@
 <span class="iconify text-2xl" data-icon="mdi:scissors-cutting"></span>
 </div>
 <div>
-<h3 class="font-display font-bold text-lg">Salon Élégance</h3>
-<p class="text-xs text-gray-500">Coiffure & Beauté Premium</p>
+<h3 class="font-display font-bold text-lg">Sylva Coiffure</h3>
+<p class="text-xs text-gray-500">Coiffure & Beauté à Lubumbashi</p>
 </div>
 </div>
 <div class="grid grid-cols-3 gap-3 mb-4">
 <div class="bg-gold/10 p-3 rounded-lg">
-<p class="text-2xl font-bold text-gold">+15</p>
-<p class="text-xs text-gray-600">Clients ce mois</p>
+<p class="text-2xl font-bold text-gold">+12</p>
+<p class="text-xs text-gray-600">Rendez-vous ce mois</p>
 </div>
 <div class="bg-dark/5 p-3 rounded-lg">
-<p class="text-2xl font-bold">3</p>
-<p class="text-xs text-gray-600">Salons gérés</p>
+<p class="text-2xl font-bold">1</p>
+<p class="text-xs text-gray-600">Salon géré</p>
 </div>
 <div class="bg-green-50 p-3 rounded-lg">
-<p class="text-2xl font-bold text-green-600">98%</p>
+<p class="text-2xl font-bold text-green-600">100%</p>
 <p class="text-xs text-gray-600">Satisfaction</p>
 </div>
 </div>
 <div class="space-y-2">
 <div class="flex items-center gap-3 p-2 bg-white rounded-lg border border-gray-100">
 <span class="iconify text-gold" data-icon="mdi:calendar-check"></span>
-<span class="text-sm">Réservation - Sarah M.</span>
+<span class="text-sm">Réservation - Mme M.</span>
 <span class="ml-auto text-xs text-gray-400">14h00</span>
 </div>
 <div class="flex items-center gap-3 p-2 bg-white rounded-lg border border-gray-100">
 <span class="iconify text-gold" data-icon="mdi:calendar-check"></span>
-<span class="text-sm">Coloration - Léa K.</span>
+<span class="text-sm">Coloration - Mme K.</span>
 <span class="ml-auto text-xs text-gray-400">15h30</span>
 </div>
 </div>
@@ -137,8 +135,8 @@
 <span class="iconify text-green-600 text-2xl" data-icon="mdi:trending-up"></span>
 </div>
 <div>
-<p class="text-xs text-gray-500">Croissance</p>
-<p class="font-bold text-lg">+ 42%</p>
+<p class="text-xs text-gray-500">Visibilité</p>
+<p class="font-bold text-lg">Google</p>
 </div>
 </div>
 </div>
@@ -153,25 +151,25 @@
 <div class="text-center mb-16 reveal">
 <span class="text-gold font-semibold text-sm tracking-widest">LE PROBLÈME</span>
 <h2 class="font-display text-4xl md:text-5xl font-bold mt-4">
-                Gérer un salon, c'est déjà difficile.<br>
-<span class="text-gold italic">En gérer plusieurs ?</span>
+                Vos clientes vous cherchent sur Google.<br>
+<span class="text-gold italic">Vous n'y êtes pas.</span>
 </h2>
 </div>
 <div class="grid md:grid-cols-3 gap-8">
 <div class="bg-dark-soft p-8 rounded-2xl reveal">
 <span class="iconify text-5xl text-gold mb-4 block" data-icon="mdi:store-off"></span>
-<h3 class="font-display text-2xl font-bold mb-3">Aucune visibilité en ligne</h3>
-<p class="text-gray-400">Vos clients ne vous trouvent pas sur Internet. Vos concurrents prennent l'avance chaque jour.</p>
+<h3 class="font-display text-2xl font-bold mb-3">Aucune présence en ligne</h3>
+<p class="text-gray-400">Les jeunes tapent "coiffure Lubumbashi" et trouvent vos concurrents. Vous restez invisible.</p>
 </div>
 <div class="bg-dark-soft p-8 rounded-2xl reveal">
 <span class="iconify text-5xl text-gold mb-4 block" data-icon="mdi:cash-remove"></span>
-<h3 class="font-display text-2xl font-bold mb-3">Sites trop chers</h3>
-<p class="text-gray-400">Les agences demandent des milliers d'euros. Et il faut payer encore plus pour chaque salon supplémentaire.</p>
+<h3 class="font-display text-2xl font-bold mb-3">Sites trop chers et compliqués</h3>
+<p class="text-gray-400">Les agences demandent des centaines de dollars. Et vous n'avez aucun contrôle après.</p>
 </div>
 <div class="bg-dark-soft p-8 rounded-2xl reveal">
 <span class="iconify text-5xl text-gold mb-4 block" data-icon="mdi:cog-off"></span>
-<h3 class="font-display text-2xl font-bold mb-3">Trop compliqué</h3>
-<p class="text-gray-400">Vous n'êtes pas développeur. Vous voulez gérer votre salon, pas perdre des heures avec la technique.</p>
+<h3 class="font-display text-2xl font-bold mb-3">Manque de temps</h3>
+<p class="text-gray-400">Vous gérez déjà votre salon, vos employés, vos stocks. Pas le temps de devenir webmaster.</p>
 </div>
 </div>
 </div>
@@ -183,10 +181,10 @@
 <div class="text-center mb-16 reveal">
 <span class="text-gold font-semibold text-sm tracking-widest">LA SOLUTION</span>
 <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 mb-6">
-                Une plateforme. <span class="text-gold italic">Tous vos salons.</span>
+                Un site vitrine <span class="text-gold italic">simple et efficace</span>
 </h2>
 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                Nous avons simplifié au maximum. En quelques clics, votre salon est en ligne avec un site élégant, professionnel, prêt à attirer des clients.
+                Je crée pour vous un site sur mesure, avec vos photos, vos services, et un bouton WhatsApp. Vous le testez gratuitement pendant 14 jours.
 </p>
 </div>
 
@@ -195,24 +193,24 @@
 <div class="w-14 h-14 bg-gold/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gold transition">
 <span class="iconify text-3xl text-gold group-hover:text-white transition" data-icon="mdi:rocket-launch"></span>
 </div>
-<h3 class="font-display text-2xl font-bold mb-3">Création express</h3>
-<p class="text-gray-600">Votre espace est prêt en quelques minutes. Pas de code, pas de prise de tête.</p>
+<h3 class="font-display text-2xl font-bold mb-3">Mise en ligne rapide</h3>
+<p class="text-gray-600">Votre site est prêt en 24 à 48h. Vous me fournissez juste vos photos et vos infos.</p>
 </div>
 
 <div class="group bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-100 hover:border-gold transition-all reveal">
 <div class="w-14 h-14 bg-gold/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gold transition">
 <span class="iconify text-3xl text-gold group-hover:text-white transition" data-icon="mdi:link-variant"></span>
 </div>
-<h3 class="font-display text-2xl font-bold mb-3">Lien personnalisé</h3>
-<p class="text-gray-600">Chaque salon obtient son propre lien web unique, à partager partout : Instagram, WhatsApp, Google.</p>
+<h3 class="font-display text-2xl font-bold mb-3">Votre lien personnalisé</h3>
+<p class="text-gray-600">Un site à votre nom, que vous partagez sur WhatsApp, Facebook, Instagram et Google.</p>
 </div>
 
 <div class="group bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl border border-gray-100 hover:border-gold transition-all reveal">
 <div class="w-14 h-14 bg-gold/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-gold transition">
 <span class="iconify text-3xl text-gold group-hover:text-white transition" data-icon="mdi:palette"></span>
 </div>
-<h3 class="font-display text-2xl font-bold mb-3">Personnalisation totale</h3>
-<p class="text-gray-600">Couleurs, photos, services, tarifs. Modifiez tout en quelques secondes, à votre image.</p>
+<h3 class="font-display text-2xl font-bold mb-3">Design premium</h3>
+<p class="text-gray-600">Je conçois un site élégant qui correspond à l'univers de votre salon de beauté.</p>
 </div>
 </div>
 </div>
@@ -224,95 +222,104 @@
 <div class="text-center mb-16 reveal">
 <span class="text-gold font-semibold text-sm tracking-widest">CE QUE VOUS GAGNEZ</span>
 <h2 class="font-display text-4xl md:text-5xl font-bold mt-4">
-                Plus de clients. <span class="text-gold italic">Moins de stress.</span>
+                Plus de clientes. <span class="text-gold italic">Moins de stress.</span>
 </h2>
 </div>
 <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all hover:-translate-y-2 reveal">
 <span class="iconify text-5xl text-gold mb-4 block" data-icon="mdi:clock-fast"></span>
 <h3 class="font-bold text-xl mb-2">Gain de temps</h3>
-<p class="text-gray-600 text-sm">Tout est centralisé. Une seule connexion pour gérer tous vos salons.</p>
+<p class="text-gray-600 text-sm">Votre site fonctionne 24h/24. Les clientes réservent même quand vous dormez.</p>
 </div>
 <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all hover:-translate-y-2 reveal">
 <span class="iconify text-5xl text-gold mb-4 block" data-icon="mdi:account-group"></span>
-<h3 class="font-bold text-xl mb-2">Plus de clients</h3>
-<p class="text-gray-600 text-sm">Présence en ligne professionnelle = +40% de réservations en moyenne.</p>
+<h3 class="font-bold text-xl mb-2">Nouveaux clients</h3>
+<p class="text-gray-600 text-sm">Apparaître sur Google vous apporte une clientèle que vous n'auriez jamais eue.</p>
 </div>
 <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all hover:-translate-y-2 reveal">
 <span class="iconify text-5xl text-gold mb-4 block" data-icon="mdi:view-dashboard"></span>
-<h3 class="font-bold text-xl mb-2">Gestion centralisée</h3>
-<p class="text-gray-600 text-sm">Tous vos établissements visibles depuis un seul tableau de bord.</p>
+<h3 class="font-bold text-xl mb-2">Gestion simple</h3>
+<p class="text-gray-600 text-sm">Je m'occupe de la technique. Vous gardez le contrôle sur votre contenu.</p>
 </div>
 <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-2xl transition-all hover:-translate-y-2 reveal">
 <span class="iconify text-5xl text-gold mb-4 block" data-icon="mdi:gesture-tap"></span>
-<h3 class="font-bold text-xl mb-2">Ultra simple</h3>
-<p class="text-gray-600 text-sm">Conçu pour les non-techniciens. Si vous savez utiliser WhatsApp, vous saurez l'utiliser.</p>
+<h3 class="font-bold text-xl mb-2">Zéro risque</h3>
+<p class="text-gray-600 text-sm">14 jours d'essai, sans carte bancaire, sans piège. Vous ne payez que si vous gardez le site.</p>
 </div>
 </div>
 </div>
 </section>
 
-<!-- ===================== POURQUOI NOUS ===================== -->
-<section class="py-20 bg-dark text-white relative overflow-hidden">
+<!-- ===================== POURQUOI MOI ===================== -->
+<section id="qui-suis-je" class="py-20 bg-dark text-white relative overflow-hidden">
 <div class="absolute top-0 right-0 w-96 h-96 bg-gold/20 rounded-full blur-3xl"></div>
 <div class="max-w-7xl mx-auto px-6 relative">
 <div class="grid lg:grid-cols-2 gap-12 items-center">
 <div class="reveal">
-<span class="text-gold font-semibold text-sm tracking-widest">POURQUOI NOUS CHOISIR</span>
+<span class="text-gold font-semibold text-sm tracking-widest">QUI SUIS-JE</span>
 <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 mb-8">
-                    La différence se voit<br>
-<span class="text-gold italic">dès le premier jour.</span>
+                    Vainqueur Kalema,<br>
+<span class="text-gold italic">fondateur de Kairos.</span>
 </h2>
+<p class="text-gray-300 mb-6">
+                    Je suis développeur full-stack basé à Lubumbashi. Ma mission : aider les salons de coiffure et de beauté à obtenir la visibilité qu'ils méritent.
+                </p>
+<p class="text-gray-300 mb-6">
+                    J'ai créé cette plateforme pour que chaque salon, même sans connaissance technique, puisse avoir un site professionnel à un prix abordable.
+                </p>
 <ul class="space-y-5">
 <li class="flex gap-4">
 <span class="iconify text-3xl text-gold flex-shrink-0" data-icon="mdi:check-decagram"></span>
 <div>
-<h4 class="font-bold text-lg">Site prêt en 24h chrono</h4>
-<p class="text-gray-400 text-sm">Promesse tenue. Sinon, c'est offert.</p>
+<h4 class="font-bold text-lg">Expert en sites pour salons</h4>
+<p class="text-gray-400 text-sm">J'ai déjà accompagné plusieurs salons à Lubumbashi et Kinshasa.</p>
 </div>
 </li>
 <li class="flex gap-4">
 <span class="iconify text-3xl text-gold flex-shrink-0" data-icon="mdi:check-decagram"></span>
 <div>
-<h4 class="font-bold text-lg">Design premium inclus</h4>
-<p class="text-gray-400 text-sm">Élégance et modernité, fait pour le luxe et la beauté.</p>
+<h4 class="font-bold text-lg">Support humain direct</h4>
+<p class="text-gray-400 text-sm">Contactez-moi sur WhatsApp, je vous réponds moi-même en moins de 30 minutes.</p>
 </div>
 </li>
 <li class="flex gap-4">
 <span class="iconify text-3xl text-gold flex-shrink-0" data-icon="mdi:check-decagram"></span>
 <div>
-<h4 class="font-bold text-lg">Support humain par WhatsApp</h4>
-<p class="text-gray-400 text-sm">Une question ? Une réponse en moins de 30 minutes.</p>
-</div>
-</li>
-<li class="flex gap-4">
-<span class="iconify text-3xl text-gold flex-shrink-0" data-icon="mdi:check-decagram"></span>
-<div>
-<h4 class="font-bold text-lg">Aucune compétence requise</h4>
-<p class="text-gray-400 text-sm">On s'occupe de tout. Vous gérez votre salon.</p>
+<h4 class="font-bold text-lg">Pédagogie et simplicité</h4>
+<p class="text-gray-400 text-sm">Je vous explique tout en 2 minutes via un message vocal. Pas de jargon.</p>
 </div>
 </li>
 </ul>
+<div class="mt-8">
+<a href="https://wa.me/{{ whatsapp_number }}?text={{ whatsapp_message | urlencode }}" target="_blank"
+   class="inline-flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full font-bold shadow-xl hover:scale-105 transition">
+<span class="iconify text-2xl" data-icon="mdi:whatsapp"></span>
+                Discutons ensemble
+</a>
+</div>
 </div>
 <div class="reveal">
 <div class="bg-gradient-to-br from-gold/20 to-transparent p-1 rounded-3xl">
-<div class="bg-dark-soft p-10 rounded-3xl">
-<div class="text-center">
-<p class="font-display text-7xl font-black text-gold mb-2">24h</p>
-<p class="text-xl mb-6">C'est le temps qu'il vous faut pour avoir un site en ligne.</p>
+<div class="bg-dark-soft p-10 rounded-3xl text-center">
+<!-- Emplacement photo -->
+<div class="w-32 h-32 mx-auto mb-6 rounded-full bg-gold/20 border-2 border-gold flex items-center justify-center overflow-hidden">
+<img src="...photo..." class="w-full h-full object-cover">
+<span class="iconify text-6xl text-gold" data-icon="mdi:account-circle"></span>
+</div>
+<p class="font-display text-2xl font-bold mb-2">Vainqueur Kalema</p>
+<p class="text-gray-400 mb-6">Fondateur Kairos Écosystème</p>
 <div class="border-t border-gray-700 pt-6 grid grid-cols-3 gap-4">
 <div>
-<p class="text-3xl font-bold text-gold">10+</p>
-<p class="text-xs text-gray-400">Salons actifs</p>
+<p class="text-3xl font-bold text-gold">5+</p>
+<p class="text-xs text-gray-400">Salons satisfaits</p>
 </div>
 <div>
-<p class="text-3xl font-bold text-gold">98%</p>
-<p class="text-xs text-gray-400">Satisfaction</p>
+<p class="text-3xl font-bold text-gold">100%</p>
+<p class="text-xs text-gray-400">Réactivité</p>
 </div>
 <div>
-<p class="text-3xl font-bold text-gold">24/7</p>
+<p class="text-3xl font-bold text-gold">7j/7</p>
 <p class="text-xs text-gray-400">Support</p>
-</div>
 </div>
 </div>
 </div>
@@ -328,33 +335,32 @@
 <div class="text-center mb-16 reveal">
 <span class="text-gold font-semibold text-sm tracking-widest">COMMENT ÇA MARCHE</span>
 <h2 class="font-display text-4xl md:text-5xl font-bold mt-4">
-                Trois étapes. <span class="text-gold italic">Zéro complication.</span>
+                Trois étapes. <span class="text-gold italic">Aucune complication.</span>
 </h2>
 </div>
 <div class="grid md:grid-cols-3 gap-8 relative">
-<!-- Ligne décorative -->
 <div class="hidden md:block absolute top-12 left-1/4 right-1/4 h-px bg-gradient-to-r from-gold via-gold to-gold opacity-30"></div>
 
 <div class="relative text-center reveal">
 <div class="w-24 h-24 bg-gradient-to-br from-gold to-gold-light text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl relative z-10">
 <span class="font-display text-4xl font-bold">1</span>
 </div>
-<h3 class="font-display text-2xl font-bold mb-3">On crée votre espace</h3>
-<p class="text-gray-600">Contactez-nous sur WhatsApp. Nous créons votre espace immédiatement.</p>
+<h3 class="font-display text-2xl font-bold mb-3">Vous me contactez</h3>
+<p class="text-gray-600">Écrivez-moi sur WhatsApp. Nous discutons de votre salon et de vos besoins.</p>
 </div>
 <div class="relative text-center reveal">
 <div class="w-24 h-24 bg-gradient-to-br from-gold to-gold-light text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl relative z-10">
 <span class="font-display text-4xl font-bold">2</span>
 </div>
-<h3 class="font-display text-2xl font-bold mb-3">Vous recevez votre lien</h3>
-<p class="text-gray-600">Un lien unique pour chaque salon. Partagez-le immédiatement à vos clients.</p>
+<h3 class="font-display text-2xl font-bold mb-3">Je crée votre prototype</h3>
+<p class="text-gray-600">En 24h, je vous envoie un lien pour voir votre site. Gratuitement, sans engagement.</p>
 </div>
 <div class="relative text-center reveal">
 <div class="w-24 h-24 bg-gradient-to-br from-gold to-gold-light text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-xl relative z-10">
 <span class="font-display text-4xl font-bold">3</span>
 </div>
-<h3 class="font-display text-2xl font-bold mb-3">Vous personnalisez</h3>
-<p class="text-gray-600">Photos, services, prix… votre site reflète votre identité en quelques clics.</p>
+<h3 class="font-display text-2xl font-bold mb-3">Vous testez, vous validez</h3>
+<p class="text-gray-600">Vous utilisez le site pendant 14 jours. Si vous l'aimez, on continue ensemble.</p>
 </div>
 </div>
 </div>
@@ -364,12 +370,12 @@
 <section id="temoignages" class="py-20 bg-gray-50">
 <div class="max-w-7xl mx-auto px-6">
 <div class="text-center mb-16 reveal">
-<span class="text-gold font-semibold text-sm tracking-widest">ILS NOUS FONT CONFIANCE</span>
+<span class="text-gold font-semibold text-sm tracking-widest">ILS ME FONT CONFIANCE</span>
 <h2 class="font-display text-4xl md:text-5xl font-bold mt-4">
-                Des résultats <span class="text-gold italic">concrets.</span>
+                Des résultats <span class="text-gold italic">réels.</span>
 </h2>
 </div>
-<div class="grid md:grid-cols-3 gap-8">
+<div class="grid md:grid-cols-2 gap-8">
 <div class="bg-white p-8 rounded-2xl shadow-sm reveal">
 <div class="flex text-gold mb-4">
 <span class="iconify" data-icon="mdi:star"></span>
@@ -378,12 +384,12 @@
 <span class="iconify" data-icon="mdi:star"></span>
 <span class="iconify" data-icon="mdi:star"></span>
 </div>
-<p class="text-gray-700 italic mb-6">"En 2 jours, mon site était en ligne et j'ai eu mes premières réservations. Aujourd'hui, je gère mes 3 salons depuis le même endroit."</p>
+<p class="text-gray-700 italic mb-6">"Vainqueur a créé pour moi une application de gestion financière simple et efficace. Il m'a tout expliqué pas à pas, patiemment. Le résultat m'a permis de mieux suivre mes comptes et de gagner en sérénité. Je le recommande à tous les entrepreneurs."</p>
 <div class="flex items-center gap-3">
-<div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold to-gold-light flex items-center justify-center text-white font-bold">F</div>
+<div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold to-gold-light flex items-center justify-center text-white font-bold">B</div>
 <div>
-<p class="font-bold">Fatima B.</p>
-<p class="text-xs text-gray-500">3 salons La perle</p>
+<p class="font-bold">Blanche Mayele</p>
+<p class="text-xs text-gray-500">Etudiante en economie, Lubumbasi</p>
 </div>
 </div>
 </div>
@@ -395,29 +401,12 @@
 <span class="iconify" data-icon="mdi:star"></span>
 <span class="iconify" data-icon="mdi:star"></span>
 </div>
-<p class="text-gray-700 italic mb-6">"Je n'y connaissais rien en informatique. L'équipe a tout fait pour moi. Aujourd'hui, mes clients me trouvent sur Google."</p>
+<p class="text-gray-700 italic mb-6">"J'avais besoin d'un site pour que mes clientes me trouvent facilement sur Google. Vainqueur a été rapide, à l'écoute, et m'a livré un site magnifique en quelques jours. Depuis, je reçois des messages WhatsApp directement depuis le site. Foncez, c'est un professionnel de confiance."</p>
 <div class="flex items-center gap-3">
 <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold to-gold-light flex items-center justify-center text-white font-bold">S</div>
 <div>
-<p class="font-bold">Sofia M.</p>
-<p class="text-xs text-gray-500">Maison de beauté, Lubumbashi</p>
-</div>
-</div>
-</div>
-<div class="bg-white p-8 rounded-2xl shadow-sm reveal">
-<div class="flex text-gold mb-4">
-<span class="iconify" data-icon="mdi:star"></span>
-<span class="iconify" data-icon="mdi:star"></span>
-<span class="iconify" data-icon="mdi:star"></span>
-<span class="iconify" data-icon="mdi:star"></span>
-<span class="iconify" data-icon="mdi:star"></span>
-</div>
-<p class="text-gray-700 italic mb-6">"+ 60% de nouveaux clients en 3 mois. Le rapport qualité-prix est imbattable. Je recommande à tous mes confrères."</p>
-<div class="flex items-center gap-3">
-<div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold to-gold-light flex items-center justify-center text-white font-bold">K</div>
-<div>
-<p class="font-bold">Sylvain K.</p>
-<p class="text-xs text-gray-500">Sylva-coiffure, Lubumbashi</p>
+<p class="font-bold">Mr Sylvain kamanda</p>
+<p class="text-xs text-gray-500">Sylva Coiffure, Lubumbashi</p>
 </div>
 </div>
 </div>
@@ -429,28 +418,28 @@
 <section id="demo" class="py-20 bg-gradient-to-br from-dark via-dark-soft to-dark text-white relative overflow-hidden">
 <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(201,169,97,0.15),transparent_50%)]"></div>
 <div class="max-w-4xl mx-auto px-6 text-center relative reveal">
-<span class="inline-flex items-center gap-2 bg-gold/20 text-gold px-4 py-2 rounded-full text-xs font-semibold mb-6 animate-pulse">
+<span class="inline-flex items-center gap-2 bg-gold/20 text-gold px-4 py-2 rounded-full text-xs font-semibold mb-6">
 <span class="iconify" data-icon="mdi:fire"></span>
-            OFFRE LIMITÉE — PLUS QUE QUELQUES PLACES CETTE SEMAINE
+            PLACES LIMITÉES — 5 PROJETS CE MOIS
 </span>
 <h2 class="font-display text-4xl md:text-6xl font-black mb-6 leading-tight">
-            Lancez votre site<br>
-<span class="text-gold italic">aujourd'hui.</span>
+            Votre salon mérite<br>
+<span class="text-gold italic">d'être trouvé.</span>
 </h2>
 <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
-            Chaque jour sans site, c'est des clients qui vont chez vos concurrents. Reprenez l'avantage maintenant.
+            Chaque jour sans site, c'est des clientes qui passent à côté de votre salon. Offrez-vous une présence en ligne dès aujourd'hui, sans aucun risque.
 </p>
 
 <!-- Formulaire email -->
 <form id="contactForm" class="max-w-xl mx-auto mb-8">
 <div class="flex flex-col sm:flex-row gap-3">
 <input type="text" name="name" placeholder="Votre prénom" required
-                       class="flex-1 px-6 py-4 rounded-full bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-gold transition">
+   class="flex-1 px-6 py-4 rounded-full bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-gold transition">
 <input type="email" name="email" placeholder="Votre email" required
-                       class="flex-1 px-6 py-4 rounded-full bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-gold transition">
+   class="flex-1 px-6 py-4 rounded-full bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-gold transition">
 <button type="submit"
-                        class="bg-gold hover:bg-gold-light text-dark px-8 py-4 rounded-full font-bold transition whitespace-nowrap">
-                    Recevoir une démo
+   class="bg-gold hover:bg-gold-light text-dark px-8 py-4 rounded-full font-bold transition whitespace-nowrap">
+            Recevoir une démo
 </button>
 </div>
 <p id="formMessage" class="mt-4 text-sm hidden"></p>
@@ -460,10 +449,10 @@
 <span>ou</span>
 </div>
 
-<a href="https://wa.me/{{ whatsapp_number }}?text={{ whatsapp_message }}" target="_blank"
-           class="inline-flex items-center gap-3 bg-[#25D366] text-white px-10 py-5 rounded-full font-bold text-lg shadow-2xl hover:scale-105 transition mt-4">
+<a href="https://wa.me/{{ whatsapp_number }}?text={{ whatsapp_message | urlencode }}" target="_blank"
+   class="inline-flex items-center gap-3 bg-[#25D366] text-white px-10 py-5 rounded-full font-bold text-lg shadow-2xl hover:scale-105 transition mt-4">
 <span class="iconify text-3xl" data-icon="mdi:whatsapp"></span>
-            Discuter sur WhatsApp maintenant
+    Discuter sur WhatsApp maintenant
 </a>
 <p class="text-gray-500 text-xs mt-4">Réponse en moins de 30 minutes ⚡</p>
 </div>
@@ -475,9 +464,9 @@
 <div class="flex flex-col md:flex-row items-center justify-between gap-6">
 <div class="flex items-center gap-2">
 <span class="iconify text-gold text-2xl" data-icon="mdi:scissors-cutting"></span>
-<span class="font-display font-bold text-xl text-white">Salon<span class="text-gold">Pro</span></span>
+<span class="font-display font-bold text-xl text-white">Kairos<span class="text-gold"> Écosystème</span></span>
 </div>
-<p class="text-sm">© 2026 Slik. Tous droits réservés.</p>
+<p class="text-sm">© 2026 Vainqueur Kalema. Tous droits réservés.</p>
 <div class="flex gap-4">
 <a href="#" class="hover:text-gold transition"><span class="iconify text-xl" data-icon="mdi:instagram"></span></a>
 <a href="#" class="hover:text-gold transition"><span class="iconify text-xl" data-icon="mdi:facebook"></span></a>
@@ -488,7 +477,7 @@
 </footer>
 
 <!-- ===================== BOUTON WHATSAPP FLOTTANT ===================== -->
-<a href="https://wa.me/{{ whatsapp_number }}?text={{ whatsapp_message }}" target="_blank"
+<a href="https://wa.me/{{ whatsapp_number }}?text={{ whatsapp_message | urlencode }}" target="_blank"
    class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-all whatsapp-float"
    aria-label="Contacter sur WhatsApp">
 <span class="iconify text-3xl" data-icon="mdi:whatsapp"></span>
