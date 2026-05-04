@@ -1,6 +1,6 @@
 /* =====================================================
-   SalonPro — JavaScript principal
-   Animations scroll, menu mobile, formulaire
+   Kairos Écosystème — JavaScript principal
+   Animations scroll, menu mobile, formulaire → WhatsApp
    ===================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ========== Formulaire de contact ==========
+    // ========== Formulaire de contact → redirection WhatsApp ==========
     const form = document.getElementById('contactForm');
     const formMessage = document.getElementById('formMessage');
 
@@ -71,18 +71,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 const data = await response.json();
 
-                formMessage.classList.remove('hidden');
-                if (data.success) {
-                    formMessage.textContent = 'votre message a été envoyer ' + data.message;
+                if (data.success && data.whatsapp_url) {
+                    // Message temporaire de confirmation
+                    formMessage.classList.remove('hidden');
+                    formMessage.textContent = '✨ Redirection vers WhatsApp...';
                     formMessage.className = 'mt-4 text-sm text-green-400';
                     form.reset();
+                    // Ouvre WhatsApp dans un nouvel onglet
+                    window.open(data.whatsapp_url, '_blank');
                 } else {
-                    formMessage.textContent = ' Une erreur est survenue.';
+                    formMessage.classList.remove('hidden');
+                    formMessage.textContent = '❌ Erreur lors de l\'envoi.';
                     formMessage.className = 'mt-4 text-sm text-red-400';
                 }
             } catch (error) {
                 formMessage.classList.remove('hidden');
-                formMessage.textContent = ' Erreur de connexion.';
+                formMessage.textContent = '❌ Erreur de connexion.';
                 formMessage.className = 'mt-4 text-sm text-red-400';
             }
         });
@@ -90,12 +94,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ========== Effet parallaxe léger sur le hero ==========
     const hero = document.querySelector('section.relative.pt-32');
-    window.addEventListener('scroll', () => {
-        if (hero && window.scrollY < 600) {
-            const offset = window.scrollY * 0.3;
-            hero.style.backgroundPosition = `center ${offset}px`;
-        }
-    });
+    if (hero) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY < 600) {
+                const offset = window.scrollY * 0.3;
+                hero.style.backgroundPosition = `center ${offset}px`;
+            }
+        });
+    }
 
-    console.log('🚀 SalonPro chargé avec succès');
+    console.log('✨ Kairos Écosystème — prêt à propulser votre visibilité');
 });
