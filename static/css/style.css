@@ -1,5 +1,5 @@
 /* =====================================================
-   SalonPro — Custom Styles
+   Kairos Écosystème — Custom Styles
    Style premium, animations, fluidité
    ===================================================== */
 
@@ -74,4 +74,17 @@ body {
 /* ===== Form focus premium ===== */
 input:focus {
     box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.2);
+}
+
+/* ===== Liens et boutons en douceur ===== */
+a, button {
+    transition: all 0.3s ease;
+}
+
+/* ===== Petite touche Kairos ===== */
+.text-gold {
+    color: #C9A961;
+}
+.bg-gold {
+    background-color: #C9A961;
 }
