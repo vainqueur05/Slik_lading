@@ -1,15 +1,17 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Créez votre site de salon de coiffure et beauté en 24h. Gérez tous vos établissements depuis une seule plateforme.">
-<title>{% block title %}SalonPro — Votre site de salon prêt en 24h{% endblock %}</title>
+<meta name="description" content="Kairos Écosystème — Sites web professionnels pour salons de coiffure et beauté. Créez votre vitrine en ligne gratuitement.">
+<title>{% block title %}Kairos Écosystème — Sites pour salons de beauté{% endblock %}</title>
 
-<!-- Google Fonts : Premium typography -->
+<!-- Préconnexions pour performances -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://code.iconify.design">
+
+<!-- Google Fonts : Premium typography -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- Tailwind CSS -->
@@ -33,16 +35,20 @@
       }
 </script>
 
-<!-- Bootstrap (utilitaires uniquement, pas de conflit) -->
+<!-- Bootstrap (utilitaires grid uniquement, pas de conflit) -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap-grid.min.css" rel="stylesheet">
 
-<!-- Iconify -->
+<!-- Iconify (icônes) -->
 <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script>
+
+<!-- Favicon (simple) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✂️</text></svg>">
 
 <!-- Custom CSS -->
 <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body class="font-sans bg-white text-dark antialiased">
+
     {% block content %}{% endblock %}
 
 <!-- Custom JS -->
